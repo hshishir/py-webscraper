@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "hs-pycli-tmpl"
+version = "0.1.0"
+description = ""
+authors = ["Hemang Shishir <hshishir@outlook.com>"]
+readme = "README.md"
+packages = [{include = "hs_py_webscraper", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+selenium-wire = "^5.1.0"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.scripts]
+hs_py_webscraper = "hs_py_webscraper.cli:runcli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
